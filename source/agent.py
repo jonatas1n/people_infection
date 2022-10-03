@@ -14,19 +14,6 @@ class Person(Agent):
 
 
     def step(self):
-        if self.condition == 'Sick':
-            for neighbor in self.model.grid.neighbor_iter(self.pos):
-                if neighbor.condition == 'Healthy':
-                    continue
-                if self.model.random.random() <= self.model.infectivity_rate:
-                    neighbor.condition = 'Sick'
-                    neighbor.infection_days_remaining = self.model.infection_duration
-
-        if self.infection_days_remaining > 0:
-            self.infection_days_remaining -= 1
-        else:
-            self.condition = 'Healthy'
-
         new_direction = randint(0, 359)
         
         x, y = self.pos
@@ -49,3 +36,16 @@ class Person(Agent):
             return
         
         self.model.grid.move_agent(self, (x, y))
+
+        if self.condition == 'Sick':
+            for neighbor in self.model.grid.neighbor_iter(self.pos):
+                if neighbor.condition == 'Healthy':
+                    continue
+                if self.model.random.random() <= self.model.infectivity_rate:
+                    neighbor.condition = 'Sick'
+                    neighbor.infection_days_remaining = self.model.infection_duration
+
+        if self.infection_days_remaining > 0:
+            self.infection_days_remaining -= 1
+        else:
+            self.condition = 'Healthy'
