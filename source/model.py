@@ -11,7 +11,7 @@ class PeopleCollision(Model):
     Simple Forest Fire model.
     """
 
-    def __init__(self, width=100, height=100, density=0.5, infection_rate=0.5, infectivity_rate=0.5, infection_duration=3):
+    def __init__(self, width=100, height=100, density=0.5, infection_rate=0.5, infectivity_rate=0.5, infection_duration=10):
         """
         Create a new forest fire model.
 

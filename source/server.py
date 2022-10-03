@@ -2,7 +2,6 @@ from mesa.visualization.modules import (
     CanvasGrid,
     ChartModule,
     PieChartModule,
-    BarChartModule,
 )
 from mesa.visualization.ModularVisualization import ModularServer
 from mesa.visualization.UserParam import UserSettableParameter
@@ -40,7 +39,7 @@ model_params = {
     "density": UserSettableParameter("slider", "Demographic density", 0.5, 0.01, 1.0, 0.01),
     "infection_rate": UserSettableParameter("slider", "Infected Rate", 0.5, 0.01, 0.99, 0.01),
     "infectivity_rate": UserSettableParameter("slider", "Infectivity Rate", 0.5, 0.01, 0.99, 0.01),
-    "infection_duration": UserSettableParameter("slider", "Infection Duration", 5, 1, 10, 1),
+    "infection_duration": UserSettableParameter("slider", "Infection Duration", 15, 1, 30, 1),
 }
 
 server = ModularServer(
