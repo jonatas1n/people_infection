@@ -1,5 +1,9 @@
 # People Infection Model
 
+## Autor
+Implementação idealizada e desenvolvida por Jônatas Gomes Barbosa da Silva (17/0059847), graduando em Ciência da Computação, na Universidade de Brasília
+
+
 ## O Modelo
 
 O modelo People Infection é um modelo de simulação de infecção viral por interação entre pessoas em uma mesma sala. O modelo contém algumas variáveis independentes que alteram fatores que influem sobre a infecção e a longevidade do vírus no ambiente.
